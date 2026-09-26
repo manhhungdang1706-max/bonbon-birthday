@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sinh nhật vợ iu Bon Bon ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Neue:wght@400;700&display=swap"
+        rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe4ec, #ffc2d4, #ffafcc);
+      font-family: 'Comic Neue', cursive;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 30px 20px;
+      max-width: 700px;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff3f81;
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+
+      animation: bounce 1.5s infinite;
+    }
+
+    h2 {
+      color: #ff5c8a;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .photo {
+      width: 330px;
+      max-width: 85vw;
+
+      border-radius: 30px;
+      border: 8px solid white;
+
+      box-shadow: 0 10px 30px rgba(255, 80, 130, 0.35);
+
+      animation: appear 1.5s ease;
+    }
+
+    .message {
+      margin-top: 25px;
+
+      background: rgba(255,255,255,0.8);
+
+      padding: 22px 25px;
+
+      border-radius: 25px;
+
+      color: #e83e76;
+
+      font-size: 1.25rem;
+      line-height: 1.6;
+
+      box-shadow: 0 5px 20px rgba(255, 80, 130, 0.2);
+    }
+
+    .heart {
+      position: fixed;
+      top: -30px;
+      font-size: 25px;
+      z-index: 1;
+
+      animation: fall linear forwards;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      .message {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <h1>🎂 HAPPY BIRTHDAY 🎂</h1>
+
+    <h2>Sinh nhật vợ iu Bon Booooon ❤️</h2>
+
+    <img
+      class="photo"
+      src="./img/bonbon.jpg"
+      alt="Bon Bon"
+    >
+
+    <div class="message">
+
+      Chúc mừng sinh nhật vợ thúiiii 🎀❤️
+
+      <br><br>
+
+      Chúc Bon Bon tuổi mới lúc nào cũng xinh,
+      vui vẻ và hạnh phúc thật nhiềuuuu.
+
+      <br><br>
+
+      Và tất nhiên là phải iu chồng nhiều hơn
+      năm ngoái nữa 😭❤️
+
+      <br><br>
+
+      Happy Birthday vợ iu của chồnggg 🎂✨
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function createHeart() {
+
+      const heart = document.createElement("div");
+
+      heart.className = "heart";
+
+      const hearts = ["❤️", "💕", "💗", "💖", "🎀"];
+
+      heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHeart, 300);
+
+  </script>
+
+</body>
+
+</html>
