@@ -1,48 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>It's For You - Now Smile!</title>
-  <!-- Google Fonts for a cartoonish style -->
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Bon Bon ❤️</title>
+
   <style>
-   <body>
-
-  <h1>Lô lô bô bô ❤️</h1>
-
-  <div class="video-container">
-    <img src="./img/ahatamatar.gif" alt="GIF" width="200" height="200">
-  </div>
-
-  <div class="question">
-    <p>Vợ thúi biết nay ngày gì koooo? 🥺</p>
-  </div>
-
-  <div class="button-container">
-    <button class="button" onclick="goBirthday()">KHÔNG 😭</button>
-    <button class="button no" onclick="goBirthday()">NOOOO 😭</button>
-  </div>
-
-  <div class="hamster-container">
-    <img src="./img/hamster.jpg" alt="Hamster" height="100" class="hamster">
-  </div>
-
-  <audio id="music" autoplay loop>
-    <source src="./music/ahatamatarmusic.mp3" type="audio/mp3">
-  </audio>
-
-  <button class="play-music-button" onclick="playMusic()">
-    Bật nhạc nè 🎵
-  </button>
-
-  <script>
-    function playMusic() {
-      document.getElementById("music").play();
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
+    .container {
+      padding: 30px;
+    }
+
+    h1 {
+      color: #ff477e;
+      font-size: 42px;
+    }
+
+    .question {
+      font-size: 25px;
+      color: #e63946;
+      margin: 25px;
+    }
+
+    .gif {
+      width: 200px;
+      border-radius: 20px;
+    }
+
+    button {
+      border: none;
+      padding: 15px 25px;
+      margin: 10px;
+      border-radius: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: #ff477e;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Lô lô bô bô ❤️</h1>
+
+    <img class="gif"
+         src="./img/ahatamatar.gif"
+         alt="cute">
+
+    <div class="question">
+      Vợ thúi biết nay ngày gì koooo? 🥺
+    </div>
+
+    <button onclick="goBirthday()">KHÔNG 😭</button>
+
+    <button onclick="goBirthday()">NOOOOO 😭</button>
+
+  </div>
+
+  <script>
     function goBirthday() {
-      window.location.href = "final.html";
+      window.location.href = "./final.html";
     }
   </script>
 
